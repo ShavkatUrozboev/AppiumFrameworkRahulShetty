@@ -13,7 +13,8 @@ public class MisceallanousAppiumActions extends AppiumBase {
     @Test
     public void AppiumTest(){
 //        appPackage and appActivity
-//        adb shell dumpsys window | grep -E 'mCurrentFocus'
+//        adb shell dumpsys window | grep -E 'mCurrentFocus'    = >  MAC
+//        adb shell dumpsys window | find "mCurrentFocus"       = > WINDOWS
         Activity activity =new Activity("io.appium.android.apis","io.appium.android.apis.ApiDemos");
         driver.startActivity(activity);
 
