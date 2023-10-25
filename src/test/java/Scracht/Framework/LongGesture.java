@@ -13,7 +13,7 @@ public class LongGesture extends AppiumBase {
         driver.findElement(By.xpath("//android.widget.TextView[@text='Expandable Lists']")).click();
         driver.findElement(AppiumBy.accessibilityId("1. Custom Adapter")).click();
         WebElement element = driver.findElement(By.xpath("//android.widget.TextView[@text='People Names']"));
-        longClickGesture(element,2000);
+        longClickGesture(element, 2000);
         String menuText = driver.findElement(By.id("android:id/title")).getText();
         Assert.assertEquals(menuText, "Sample menu");
         Assert.assertTrue(driver.findElement(By.id("android:id/title")).isDisplayed());

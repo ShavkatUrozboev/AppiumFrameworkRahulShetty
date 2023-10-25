@@ -3,9 +3,9 @@ package Scracht.Framework;
 import io.appium.java_client.AppiumBy;
 import org.testng.annotations.Test;
 
-public class ScrollGesture extends AppiumBase{
+public class ScrollGesture extends AppiumBase {
     @Test
-    public void ScrollGestureTest(){
+    public void ScrollGestureTest() {
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
 
         //where to scroll is known prior
