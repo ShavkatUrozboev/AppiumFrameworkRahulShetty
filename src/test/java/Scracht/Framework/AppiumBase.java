@@ -28,8 +28,8 @@ public class AppiumBase {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("Pixel_3a_PS_30");
         options.setNoReset(true);
-        options.setAppPackage("com.iwon.client");
-        options.setAppActivity("com.iwon.client.MainActivity");
+        options.setAppPackage("io.appium.android.apis");
+        options.setAppActivity("io.appium.android.apis.ApiDemos");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
