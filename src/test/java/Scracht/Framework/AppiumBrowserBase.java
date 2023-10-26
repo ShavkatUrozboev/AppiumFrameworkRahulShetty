@@ -17,7 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class AppiumBase {
+public class AppiumBrowserBase {
     public AppiumDriverLocalService service;
     public AndroidDriver driver;
 
@@ -34,8 +34,7 @@ public class AppiumBase {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("Pixel_3a_PS_30");
 //        options.setNoReset(true);
-        options.setAppPackage("com.androidsample.generalstore");
-        options.setAppActivity("com.androidsample.generalstore.MainActivity");
+        options.setCapability("browserName","Chrome");
         options.setChromedriverExecutable("//Users//shavkaturozboev//Desktop//chromedriver");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
