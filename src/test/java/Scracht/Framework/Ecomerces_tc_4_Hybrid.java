@@ -1,5 +1,6 @@
 package Scracht.Framework;
 
+import Scracht.Framework.PageObject.Android.FormPage;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
@@ -18,8 +19,10 @@ import java.util.Set;
 public class Ecomerces_tc_4_Hybrid extends AppiumBase {
     @Test
     public void Hybrid() throws InterruptedException {
-        driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Rahul Shetty");
-        driver.hideKeyboard();
+        FormPage formPage =new FormPage(driver);
+        formPage.setNameField("Hi Appium");
+
+
         driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();
         driver.findElement(By.id("android:id/text1")).click();
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Argentina\"));"));
